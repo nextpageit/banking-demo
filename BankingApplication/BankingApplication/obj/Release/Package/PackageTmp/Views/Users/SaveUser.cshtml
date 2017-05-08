@@ -1,0 +1,54 @@
+﻿@model BankingApplication.Models.User
+
+<div class="row top-content">
+    <div class="col-md-10">
+        @if (Model.UserDetails != null && Model.UserDetails.UserId > 0)
+        {
+            @Html.Raw("<h1>Edit User</h1>")
+        }
+        else
+        {
+            @Html.Raw("<h1>Add User</h1>")
+        }
+    </div>
+
+
+</div>
+<div id="applc-form" class="show-applications">
+    @using (Html.BeginForm("SaveUser", "Users", FormMethod.Post))
+    {
+        <div class="school-details">
+            <div class="row form-inline">
+                <div class="col-md-4">
+                    <div class="col-md-3">
+                        <label for="inputUrl" class="mylabel label-content">ID</label>
+                    </div>
+                    <div class="col-md-5">
+                        @Html.TextBoxFor(x => x.UserDetails.UserId, new { @readonly = "true", @maxlength = "10", @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-2">
+                        <label for="inputUrl" class="mylabel label-content">UserName</label>
+                    </div>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.UserDetails.UserName, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="text-right">
+                <label class="control-label"></label>
+                <button type="submit" class="btn btn-success fa fa-floppy-o">Save</button>
+            </div>
+
+        </div>
+    }
+
+</div>
+
+
+
+
+
+
+
