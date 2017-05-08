@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    @Html.Partial("PageHeader")    
+</head>
+@functions{
+    string GetClassName(string val)
+    {
+        return Request.RawUrl.Contains(val) ? "class=current-page" : "";
+    }
+}
+<body class="nav-md" style="padding: 0;">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view" tabindex="5000" style="overflow: hidden; outline: none;">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <span class="site_title">
+                            <a href="@(Common.BaseUrl())">
+                            </a>
+                        </span>
+                    </div><div class="clearfix"></div>
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li class="nv active">
+                                <li class="nv">
+
+                                </li>                               
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top_nav"></div>
+            <div class="right_col" role="main">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    @*<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>*@ 
+</body>
+</html>

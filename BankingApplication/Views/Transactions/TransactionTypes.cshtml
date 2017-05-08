@@ -1,0 +1,54 @@
+﻿@model BankingApplication.Models.Transactions
+
+<div class="row top-content">
+    <div class="col-md-10">
+        @if (Model.Type == "Withdraw")
+        {
+            @Html.Raw("<h1>Withdraw</h1>")
+        }
+        else
+        {
+            @Html.Raw("<h1>Deposit</h1>")
+        }
+    </div>
+
+
+</div>
+<div id="applc-form" class="show-applications">
+    @using (Html.BeginForm("SaveTransaction", "Transactions", FormMethod.Post))
+    {
+        <div class="school-details">
+            <div class="row form-inline">
+             
+                @Html.HiddenFor(model => model.Type, new { @class = "form-control" })
+                @Html.HiddenFor(model => model.UserId, new { @class = "form-control" })
+               
+                @if (Model.Type == "Withdraw")
+                {
+                    <div class="col-md-4">
+                        <div class="col-md-3">
+                            <label for="inputUrl" class="mylabel label-content">User</label>
+                        </div>
+                        <div class="col-md-5">
+                            @Html.DropDownListFor(x => x.WithdrawUserId, Model.UserList, "-- select user --", new { @class = "form-control" })
+                        </div>
+                    </div>
+                }
+                <div class="col-md-8">
+                    <div class="col-md-2">
+                        <label for="inputUrl" class="mylabel label-content">Amount</label>
+                    </div>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.Amount, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="text-right">
+                <label class="control-label"></label>
+                <button type="submit" class="btn btn-success fa fa-floppy-o">Process</button>
+            </div>
+
+        </div>
+    }
+
+</div>
