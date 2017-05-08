@@ -1,9 +1,0 @@
-﻿<div class="text-right right top-header">
-    <span class="userName"><img class="crown" src="/res/graphics/crown.png" /><span class="logoutlink">@*@HttpContext.Current.User.Identity.Name*@Admin</span></span> |
-    <span class="userLevel">
-        @*@Common.GetUserLevel()*@
-        <img class="" src="/res/graphics/logout.png" /> @Html.ActionLink("Log Out", "Logout", "Account", null, new { @class = "logoutlink" })
-</span>
-</div>
-
-

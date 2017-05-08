@@ -1,0 +1,6 @@
+E:\Karanpreet\External\BankingApplication\NextPage.BankingApplication\obj\Debug\NextPage.BankingApplication.csprojResolveAssemblyReference.cache
+E:\Karanpreet\External\BankingApplication\NextPage.BankingApplication\bin\Debug\NextPage.BankingApplication.dll
+E:\Karanpreet\External\BankingApplication\NextPage.BankingApplication\bin\Debug\NextPage.BankingApplication.pdb
+E:\Karanpreet\External\BankingApplication\NextPage.BankingApplication\bin\Debug\NextPage.DatabaseUtil.dll
+E:\Karanpreet\External\BankingApplication\NextPage.BankingApplication\obj\Debug\NextPage.BankingApplication.dll
+E:\Karanpreet\External\BankingApplication\NextPage.BankingApplication\obj\Debug\NextPage.BankingApplication.pdb
